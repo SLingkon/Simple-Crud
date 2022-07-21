@@ -42,12 +42,12 @@
                             <input type="text" class="form-control" id="lastname" placeholder="Last name">
                         </div>
                         <div class=" form-group">
-                            <label>Email:</label>
-                            <input type="Email" class="form-control" id="email" placeholder="Email">
-                        </div>
-                        <div class=" form-group">
                             <label>Mobile:</label>
                             <input type="text" class="form-control" id="mobile" placeholder="Mobile number">
+                        </div>
+                        <div class=" form-group">
+                            <label>Email:</label>
+                            <input type="Email" class="form-control" id="email" placeholder="Email">
                         </div>
                     </div>
 
@@ -68,8 +68,8 @@
         funtion addRecord() {
                 var firstname = $('#firstname').val();
                 var lastname = $('#lastname').val();
-                var email = $('#email').val();
                 var mobile = $('#mobile').val();
+                var email = $('#email').val();
 
                 $.ajax({
                     url: "backend1.php",
@@ -77,13 +77,14 @@
                     data: {
                         firstname: firstname,
                         lastname: lastname,
-                        email: email,
                         mobile: mobile
+                        email: email,
                     },
                     success: function(data) {
                         readRecord();
                     }
                 });
+            }
     </script>
 </body>
 
